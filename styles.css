@@ -1,4 +1,15 @@
+@font-face {
+  font-family: fraunces;
+  src: url(./assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: manrope;
+  src: url(./assets/fonts/manrope/static/Manrope-Regular.ttf);
+}
+
 /* reset */
+
 *,
 *::before,
 *::after {
@@ -9,6 +20,241 @@ body,
 h1,
 h2,
 h3,
-p {
+p,
+a {
   margin: 0;
 }
+
+img { 
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* custom properties */
+
+:root {
+  /* colors */
+  --clr-primary: #24053E;
+  --clr-accent: #44FFA1;
+  --clr-secondary: #584D62;
+  --clr-light-accent: #FCF8FF;
+  --clr-white: #FFFFFF;
+
+  /* font sizes */
+  --fs-large: 5rem;
+  --fs-med: 3.5rem;
+  --fs-small: 2rem;
+  --fs-body: 1.125rem;
+
+  /* line spacing */
+  --ls-large: 80px;
+  --ls-med: 64px;
+  --ls-small: 40px;
+  --ls-body: 32px;
+}
+
+/* utilities */
+
+.flex {
+  display: flex;
+}
+
+.header-large {
+  font-size: var(--fs-large);
+  line-height: var(--ls-large);
+  font-family: fraunces;
+}
+
+.header-med {
+  font-size: var(--fs-med);
+  line-height: var(--ls-med);
+  font-family: fraunces;
+
+}
+
+.header-small {
+  font-size: var(--fs-small);
+  line-height: var(--ls-small);
+  font-family: fraunces;
+
+}
+
+.reg-text {
+  font-size: var(--fs-body);
+  line-height: var(--ls-body);
+  font-family: manrope;
+}
+
+.btn-primary {
+  background-color:var(--clr-accent);
+  color: var(--clr-primary);
+  border: 2px solid var(--clr-accent);
+  transition: background-color 150ms ease-in, color 150ms ease-in;
+  max-width: 10vw;
+  padding: .85em;
+}
+
+.btn-primary:hover {
+  background-color: var(--clr-primary);
+  color: var(--clr-accent);
+}
+
+.btn-secondary {
+  border-bottom: 2px solid var(--clr-accent);
+  padding-bottom: 3px;
+  transition: color 150ms ease-in;
+}
+
+.btn-secondary:hover {
+  color: var(--clr-accent);
+}
+
+
+/* header + hero */
+
+header,
+#hero-wrapper {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+}
+
+header {
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-body);
+  padding: 2em 5% 0 5%;
+}
+
+header > img {
+  max-width: 95.61px;
+}
+
+#hero-wrapper {
+  justify-content: center;
+  position: relative;
+  border-bottom-left-radius: 100% 20%;
+  border-bottom-right-radius: 100% 20%;
+  min-height: 90vh;
+}
+
+#hero {
+  max-width: 50vw;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+#hero > img {
+  max-width: 767px;
+  display: block;
+  position: absolute;
+  top: 55%;
+}
+
+#hero h1 {
+  margin: .6em 0;
+}
+
+/* card section */ 
+
+#features {
+  background-color: var(--clr-light-accent);
+  border-bottom-left-radius: 100% 20%;
+  border-bottom-right-radius: 100% 20%;
+  min-height: 90vh;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+
+.card {
+  margin-bottom: 5em;
+  padding: 0 2em;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card > * {
+  padding: 0 0 1em 0;
+}
+
+.card > span {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  border: 1px solid var(--clr-secondary);
+  border-radius: 50%;
+  margin-bottom: 2em;
+}
+
+/* about */
+
+#about {
+  min-height: 90vh;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+}
+.founder-card {
+  --margin: 1em;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 50vw;
+  padding: 2em;
+  margin: 0 3em 3em 0;
+}
+
+.founder-card > h3 {
+  margin-bottom: var(--margin);
+}
+
+.founder-card > p {
+  margin-bottom: var(--margin);
+
+}
+
+.founder-card > a{
+  display: block;
+  max-width: none;
+  width: 40%;
+  text-align: center;
+  margin-bottom: var(--margin);
+
+}
+
+#about > img {
+  position: absolute;
+  width: 400px;
+  right: 46%;
+  bottom: 30%;
+  z-index: -1;
+}
+
+/* footer */ 
+
+footer {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+footer > img {
+  width: 100px;
+  margin-bottom: 2em;
+}
+
+#social-links img{
+  width: 20px;
+  margin: 10px;
+}
+
+
