@@ -140,6 +140,20 @@ header > img {
   border-bottom-right-radius: 100% 20%;
   min-height: 90vh;
 }
+.design-1 {
+  position: absolute;
+  max-width: 600px;
+  top: 0;
+  left: -20%;
+}
+.design-2 {
+  position: absolute;
+  max-width: 300px;
+  top: 40%;
+  left: 90%;
+}
+
+
 
 #hero {
   max-width: 70vw;
@@ -236,6 +250,13 @@ header > img {
   max-width: 50vw;
   padding: 2em;
   margin: 0 10em 3em 0;
+  position: relative;
+}
+.design-3 {
+  position: absolute;
+  max-width: 300px;
+  top: 50%;
+  left: 50%;
 }
 
 .founder-card > h3 {
@@ -329,6 +350,11 @@ footer > img {
 }
 
 @media screen and (max-width: 428px){
+  .design-1,
+  .design-2,
+  .design-3 {
+    opacity: 0;
+  }
   #about > img {
     width: 281px;
     top: 10%;
